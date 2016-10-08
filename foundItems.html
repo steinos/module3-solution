@@ -1,0 +1,8 @@
+<ol style="display:inline-block;">
+  <li ng-repeat="item in ctrl.items">
+{{ item.short_name }}: {{ item.name }},  {{ item.description }}
+    <button ng-click="ctrl.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+
+<span ng-if="ctrl.items.length == 0">Nothing found</span>
